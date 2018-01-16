@@ -98,9 +98,6 @@ FPKM_Matrix_Filt_Norm$log2foldchange <- log((FPKM_Matrix_Filt_Norm$ave_rbp2/FPKM
 head(FPKM_Matrix_Filt_Norm)
 
 
-# source("https://bioconductor.org/biocLite.R")
-# biocLite("genefilter")
-
 
 FPKM_Matrix_Filt_Norm2 <- FPKM_Matrix_Filt_Norm[c(3:8)]
 FPKM_Matrix_Filt_Norm$pvalue <- apply(FPKM_Matrix_Filt_Norm2,1,function(FPKM_Matrix_Filt_Norm2) {t.test(FPKM_Matrix_Filt_Norm2[c(1:3)],FPKM_Matrix_Filt_Norm2[c(4:6)])$p.value})
