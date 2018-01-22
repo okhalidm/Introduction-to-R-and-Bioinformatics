@@ -59,7 +59,8 @@ FPKM_Matrix_No_Zero <- dat1[apply(dat1[-c(1:2)], 1,function(x) all(x>0)),]
 
 ## Normalization between samples
 
-#install.packages("limma")
+#source("https://bioconductor.org/biocLite.R")
+#biocLite("limma")
 
 library(limma)
 FPKM_Matrix_Filt_Norm <- FPKM_Matrix_1
